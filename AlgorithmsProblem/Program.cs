@@ -5,13 +5,13 @@ class Program
     static void Main(String[] args)
     {
         Console.WriteLine("Welcome to the program");
-        Console.WriteLine("1.Binary Serach Program\n2.Exit the program");
+        Console.WriteLine("1.Binary Serach Program\n2.Insertion Sort Program\n3.Bubble Sort\n4.Merge Sort Problem");
         const string File_Path = @"D:\dotnet\Algoritmprogram\AlgorithmProgram\AlgorithmsProblem\List.txt";
         bool check = true;
         while(check)
         {
             Console.WriteLine("Enter above option to execute");
-            Algorithm search = new Algorithm();
+            BinarySearch search = new BinarySearch();
             string words = File.ReadAllText(File_Path);
             int option = Convert.ToInt32(Console.ReadLine());
             switch(option)
@@ -23,7 +23,7 @@ class Program
                     Console.WriteLine("Enter word to Search");
                     string a =Console.ReadLine();
                  
-                    int result = search.BinarySearch(arr, a);
+                    int result = search.Binary(arr, a);
                     if (result == -1)
                         Console.WriteLine("Element not present");
                     else
@@ -40,6 +40,15 @@ class Program
                     BubbleSort problem1=new BubbleSort();
                     problem1.Bubble(arr3);
                     problem1.Display(arr3);
+                    break;
+                case 4:
+                    MergeSort merge=new MergeSort();
+                    int[] arr4 = { 12, 11, 13, 5, 6, 7 };
+                    Console.WriteLine("Unsorted array");
+                    merge.DisplayMerge(arr4);
+                    merge.Sorting(arr4, 0, arr4.Length-1);
+                    Console.WriteLine("unsorted array");
+                    merge.DisplayMerge(arr4);
                     break;
                 default:
                     check = false;

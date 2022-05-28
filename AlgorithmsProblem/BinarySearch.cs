@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AlgorithmsProblem
 {
-   public class Algorithm
+   public class BinarySearch
     {
-        public int BinarySearch(String[] arr, String x)
+        public int Binary(String[] arr, String x)
 
         {
             int l = 0, r = arr.Length;
