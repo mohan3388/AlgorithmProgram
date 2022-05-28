@@ -5,7 +5,7 @@ class Program
     static void Main(String[] args)
     {
         Console.WriteLine("Welcome to the program");
-        Console.WriteLine("1.Binary Serach Program\n2.Insertion Sort Program\n3.Bubble Sort\n4.Merge Sort Problem");
+        Console.WriteLine("1.Binary Serach Program\n2.Insertion Sort Program\n3.Bubble Sort\n4.Merge Sort Problem\n5.Anagram Problem");
         const string File_Path = @"D:\dotnet\Algoritmprogram\AlgorithmProgram\AlgorithmsProblem\List.txt";
         bool check = true;
         while(check)
@@ -49,6 +49,12 @@ class Program
                     merge.Sorting(arr4, 0, arr4.Length-1);
                     Console.WriteLine("unsorted array");
                     merge.DisplayMerge(arr4);
+                    break;
+                case 5:
+                    Anagram anagram=new Anagram();
+                    string firstname = "earth";
+                    string secondname = "heart";
+                    Console.WriteLine(anagram.AnagramProblem(firstname, secondname));
                     break;
                 default:
                     check = false;
